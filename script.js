@@ -3,7 +3,12 @@ document.getElementById('btn').addEventListener('click', function () {
 
     if ('speechSynthesis' in window) {
         var speech = new SpeechSynthesisUtterance();
+        
         speech.default=false
+        speech.lang="hi-IN"
+                  speech.localService=false
+                  speech.name="Google हिन्दी"
+                  speech.voiceURI="Google हिन्दी"
                   
         speech.text = textToSpeak;
 
